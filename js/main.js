@@ -1,89 +1,49 @@
+// Este código va dentro de tu main.js
 document.addEventListener('DOMContentLoaded', () => {
-    
-    // 1. Efecto Máquina de Escribir (Typewriter)
-    const texts = [
-        "Ingeniero en Tecnologías de la Información", 
-        "Desarrollador de Software", 
-        "Ilustrador Digital"
-    ];
-    let count = 0, index = 0, isDeleting = false;
-    const typingElement = document.getElementById('typewriter');
-
-    function typewriter() {
-        if (!typingElement) return; 
-        
-        if (count === texts.length) count = 0;
-        let currentText = texts[count];
-        let letter = isDeleting ? currentText.slice(0, --index) : currentText.slice(0, ++index);
-        
-        typingElement.textContent = letter;
-        let typeSpeed = isDeleting ? 40 : 80;
-
-        if (!isDeleting && letter.length === currentText.length) {
-            typeSpeed = 2000; 
-            isDeleting = true;
-        } else if (isDeleting && letter.length === 0) {
-            isDeleting = false; 
-            count++; 
-            typeSpeed = 500; 
-        }
-        setTimeout(typewriter, typeSpeed);
-    }
-    setTimeout(typewriter, 1000); 
-
-    // 2. Cerrar el menú móvil al hacer clic
-    const navLinks = document.querySelectorAll('.nav-link');
-    const menuToggle = document.getElementById('navbarNav');
-    
-    if(menuToggle) {
-        const bsCollapse = new bootstrap.Collapse(menuToggle, {toggle: false});
-        navLinks.forEach((l) => {
-            l.addEventListener('click', () => {
-                if (menuToggle.classList.contains('show')) bsCollapse.toggle();
-            });
-        });
-    }
-
-    // 3. Envío de formulario de contacto
     const contactForm = document.getElementById('contact-form');
     const submitBtn = document.getElementById('submit-button');
 
     if (contactForm && submitBtn) {
         contactForm.addEventListener('submit', function(e) {
-            e.preventDefault(); 
+            e.preventDefault(); // Evita que la página parpadee o se recargue
             
+            // 1. Cambiar el botón a estado "Enviando..."
             const originalText = submitBtn.innerHTML;
-            submitBtn.innerHTML = 'Enviando...';
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Enviando...';
             submitBtn.disabled = true;
             submitBtn.style.opacity = '0.7';
 
+            // 2. Enviar los datos en segundo plano
             fetch(contactForm.action, {
                 method: 'POST',
                 body: new FormData(contactForm),
                 headers: { 'Accept': 'application/json' }
             })
             .then(response => {
-                submitBtn.innerHTML = '¡Mensaje Enviado!';
-                submitBtn.style.backgroundColor = '#22c55e'; // Verde éxito
+                // 3. Éxito: Botón Verde
+                submitBtn.innerHTML = '<i class="fa-solid fa-check"></i> ¡Mensaje Enviado!';
+                submitBtn.style.backgroundColor = '#22c55e'; // Verde
                 submitBtn.style.color = '#fff';
                 contactForm.reset(); 
 
+                // Restaurar el botón cyan original después de 3 segundos
                 setTimeout(() => {
                     submitBtn.innerHTML = originalText;
-                    submitBtn.style.backgroundColor = '#06b6d4'; // Volver al Cyan
+                    submitBtn.style.backgroundColor = '#06b6d4'; // Cyan
                     submitBtn.style.color = '#000';
                     submitBtn.disabled = false;
                     submitBtn.style.opacity = '1';
                 }, 3000);
             })
             .catch(error => {
-                submitBtn.innerHTML = 'Error al enviar';
-                submitBtn.style.backgroundColor = '#ef4444'; // Rojo error
+                // 4. Error: Botón Rojo
+                submitBtn.innerHTML = '<i class="fa-solid fa-xmark"></i> Error al enviar';
+                submitBtn.style.backgroundColor = '#ef4444'; // Rojo
                 submitBtn.style.color = '#fff';
 
                 setTimeout(() => {
                     submitBtn.innerHTML = originalText;
-                    submitBtn.style.backgroundColor = '#06b6d4'; // Volver al Cyan
+                    submitBtn.style.backgroundColor = '#06b6d4'; // Cyan
                     submitBtn.style.color = '#000';
                     submitBtn.disabled = false;
                     submitBtn.style.opacity = '1';
