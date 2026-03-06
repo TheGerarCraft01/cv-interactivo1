@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Avanzado | Gerardo Manjarrez Maldonado</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="cursor-dot-outline"></div>
+    <div class="cursor-dot"></div>
+
+    <div class="bg-animated">
+        <div class="grid-overlay"></div>
+    </div>
+
+    <header class="hero glass-panel fade-in-up">
+        <div class="hero-content">
+            <div class="profile-container">
+    <img src="img/mi-foto.jpg" alt="Foto de [Gerardo Manjarrez Maldonado]" class="profile-pic">
+</div>
+            
+            <h1>Gerardo Manjarrez Maldonado</h1>
+            <h2 class="subtitle">&lt; <span id="typewriter"></span> /&gt;</h2>
+            
+            <div class="location-badge">
+                <i class="fa-solid fa-location-dot"></i> Toluca, Estado de México
+            </div>
+
+            <p class="bio">Ingeniero en TI enfocado en desarrollo de software (Android/Web Full-Stack) e Ilustrador Digital. Fusionando la arquitectura de código robusta con una estética visual de vanguardia.</p>
+            
+            <div class="social-links">
+                <a href="https://github.com/TheGerarCraft01" target="_blank" class="social-btn hover-target"><i class="fa-brands fa-github"></i> GitHub</a>
+                <a href="https://linkedin.com/in/TU_USUARIO" target="_blank" class="social-btn hover-target"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+            </div>
+
+            <a href="archivos/mi-cv-profesional.pdf" class="download-btn hover-target" download="CV_TuNombre.pdf">
+                <i class="fa-solid fa-download"></i> Descargar CV en PDF
+            </a>
+        </div>
+    </header>
+
+    <main class="container">
+        <nav class="cards-grid fade-in-up" style="animation-delay: 0.2s;">
+            <div class="card active tilt hover-target" data-target="servicios">
+                <i class="fa-solid fa-laptop-code icon"></i>
+                <h3>Servicios</h3>
+            </div>
+            <div class="card tilt hover-target" data-target="proyectos">
+                <i class="fa-solid fa-code-branch icon"></i>
+                <h3>Proyectos</h3>
+            </div>
+            <div class="card tilt hover-target" data-target="habilidades">
+                <i class="fa-solid fa-chart-pie icon"></i>
+                <h3>Habilidades</h3>
+            </div>
+            <div class="card tilt hover-target" data-target="experiencia">
+                <i class="fa-solid fa-briefcase icon"></i>
+                <h3>Trayectoria</h3>
+            </div>
+            <div class="card tilt hover-target" data-target="contacto">
+                <i class="fa-solid fa-envelope icon"></i>
+                <h3>Contacto</h3>
+            </div>
+        </nav>
+
+        <section class="dynamic-wrapper glass-panel fade-in-up" style="animation-delay: 0.4s;">
+            
+            <article id="servicios" class="content-section active">
+                <h2 class="section-title">Lo que hago</h2>
+                <div class="items-grid">
+                    <div class="item tech-card tilt">
+                        <i class="fa-solid fa-mobile-screen-button feature-icon"></i>
+                        <h4>Desarrollo Android Nativo</h4>
+                        <p>Aplicaciones y videojuegos de alto rendimiento en Java/Android Studio.</p>
+                    </div>
+                    <div class="item tech-card tilt">
+                        <i class="fa-solid fa-server feature-icon"></i>
+                        <h4>Web Full-Stack</h4>
+                        <p>SPA modernas con React, estilizado avanzado y backend en Laravel.</p>
+                    </div>
+                    <div class="item tech-card tilt">
+                        <i class="fa-solid fa-palette feature-icon"></i>
+                        <h4>Arte e Ilustración</h4>
+                        <p>Concept art, assets digitales y gestión de comisiones independientes.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article id="proyectos" class="content-section">
+                <h2 class="section-title">Proyectos Destacados</h2>
+                <div class="items-grid">
+                    <div class="item tech-card tilt">
+                        <div class="project-header">
+                            <i class="fa-regular fa-folder-open folder-icon"></i>
+                            <div class="project-links"><a href="#" target="_blank" class="hover-target"><i class="fa-brands fa-github"></i></a></div>
+                        </div>
+                        <h4>Motor de Videojuegos 2D</h4>
+                        <p>Clones de Pac-Man/Generala en Android Nativo. Lógica y físicas desde cero.</p>
+                        <div class="tech-tags"><span>Android</span><span>Java</span></div>
+                    </div>
+                    <div class="item tech-card tilt">
+                        <div class="project-header">
+                            <i class="fa-regular fa-folder-open folder-icon"></i>
+                            <div class="project-links"><a href="#" target="_blank" class="hover-target"><i class="fa-brands fa-github"></i></a></div>
+                        </div>
+                        <h4>Plataforma Web React/Laravel</h4>
+                        <p>Interfaz dinámica y responsiva conectada a una API REST segura.</p>
+                        <div class="tech-tags"><span>Laravel</span><span>React</span><span>CSS</span></div>
+                    </div>
+                </div>
+            </article>
+
+            <article id="habilidades" class="content-section">
+                <h2 class="section-title">Perfil Técnico</h2>
+                <div class="skills-showcase">
+                    <div class="skill-column">
+                        <h4 class="code-font highlight-text">Lenguajes</h4>
+                        <div class="skill-bar"><div class="skill-info"><span>Java & Android</span><span>85%</span></div><div class="progress-bar"><div class="progress" data-width="85%"></div></div></div>
+                        <div class="skill-bar"><div class="skill-info"><span>React & CSS Avanzado</span><span>80%</span></div><div class="progress-bar"><div class="progress" data-width="80%"></div></div></div>
+                    </div>
+                    <div class="skill-column">
+                        <h4 class="code-font highlight-text">Backend</h4>
+                        <div class="skill-bar"><div class="skill-info"><span>Laravel & PHP</span><span>75%</span></div><div class="progress-bar"><div class="progress" data-width="75%"></div></div></div>
+                        <div class="skill-bar"><div class="skill-info"><span>SQL</span><span>80%</span></div><div class="progress-bar"><div class="progress" data-width="80%"></div></div></div>
+                    </div>
+                </div>
+            </article>
+
+            <article id="experiencia" class="content-section">
+                <h2 class="section-title">Trayectoria</h2>
+                <div class="timeline">
+                    <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content tech-card tilt"><span class="date-badge">Actualidad</span><h4>Ingeniería en TI</h4><p>Enfoque en arquitectura de software y calidad.</p></div></div>
+                    <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content tech-card tilt"><span class="date-badge">Freelance</span><h4>Ilustrador Digital</h4><p>Gestión integral de comisiones y atención a clientes reales.</p></div></div>
+                </div>
+            </article>
+
+            <article id="contacto" class="content-section">
+                <h2 class="section-title">Comunícate conmigo</h2>
+                
+                <div class="contact-container tech-card tilt" style="margin: 0 auto; max-width: 600px;">
+                    <p class="contact-text" style="color: var(--text-secondary); margin-bottom: 2rem; text-align: center;">¿Tienes un proyecto en mente o una propuesta laboral? Envíame un mensaje directo.</p>
+                    
+                    <form id="contact-form" action="https://formsubmit.co/refugerar07@gmail.com" method="POST" class="contact-form">
+                        <input type="hidden" name="_subject" value="¡Nuevo mensaje desde tu CV Online!">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+                        
+                        <div class="form-group">
+                            <input type="text" id="name" name="Nombre" placeholder="Tu Nombre" required class="hover-target">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="Correo" placeholder="Tu Correo Electrónico" required class="hover-target">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="Mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required class="hover-target"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn hover-target" id="submit-button">
+                            <i class="fa-solid fa-paper-plane"></i> Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
