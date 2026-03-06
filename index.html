@@ -3,171 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV Avanzado | Gerardo Manjarrez Maldonado</title>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <title>CVV | Gerardo Manjarrez Maldonado</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body data-bs-spy="scroll" data-bs-target="#navbar-cv">
 
-    <div class="cursor-dot-outline"></div>
-    <div class="cursor-dot"></div>
-
-    <div class="bg-animated">
-        <div class="grid-overlay"></div>
-    </div>
-
-    <header class="hero glass-panel fade-in-up">
-        <div class="hero-content">
-            <div class="profile-container">
-    <img src="img/mi-foto.jpg" alt="Foto de [Gerardo Manjarrez Maldonado]" class="profile-pic">
-</div>
-            
-            <h1>Gerardo Manjarrez Maldonado</h1>
-            <h2 class="subtitle">&lt; <span id="typewriter"></span> /&gt;</h2>
-            
-            <div class="location-badge">
-                <i class="fa-solid fa-location-dot"></i> Toluca, Estado de México
+    <nav id="navbar-cv" class="navbar navbar-expand-lg navbar-dark fixed-top no-print">
+        <div class="container">
+            <a class="navbar-brand code-font text-info" href="#inicio">&lt;CV GMM /&gt;</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mí</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
             </div>
-
-            <p class="bio">Ingeniero en TI enfocado en desarrollo de software (Android/Web Full-Stack) e Ilustrador Digital. Fusionando la arquitectura de código robusta con una estética visual de vanguardia.</p>
-            
-            <div class="social-links">
-                <a href="https://github.com/TheGerarCraft01" target="_blank" class="social-btn hover-target"><i class="fa-brands fa-github"></i> GitHub</a>
-                <a href="https://linkedin.com/in/TU_USUARIO" target="_blank" class="social-btn hover-target"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-            </div>
-
-            <a href="archivos/mi-cv-profesional.pdf" class="download-btn hover-target" download="CV_TuNombre.pdf">
-                <i class="fa-solid fa-download"></i> Descargar CV en PDF
-            </a>
         </div>
-    </header>
+    </nav>
 
-    <main class="container">
-        <nav class="cards-grid fade-in-up" style="animation-delay: 0.2s;">
-            <div class="card active tilt hover-target" data-target="servicios">
-                <i class="fa-solid fa-laptop-code icon"></i>
-                <h3>Servicios</h3>
-            </div>
-            <div class="card tilt hover-target" data-target="proyectos">
-                <i class="fa-solid fa-code-branch icon"></i>
-                <h3>Proyectos</h3>
-            </div>
-            <div class="card tilt hover-target" data-target="habilidades">
-                <i class="fa-solid fa-chart-pie icon"></i>
-                <h3>Habilidades</h3>
-            </div>
-            <div class="card tilt hover-target" data-target="experiencia">
-                <i class="fa-solid fa-briefcase icon"></i>
-                <h3>Trayectoria</h3>
-            </div>
-            <div class="card tilt hover-target" data-target="contacto">
-                <i class="fa-solid fa-envelope icon"></i>
-                <h3>Contacto</h3>
-            </div>
-        </nav>
-
-        <section class="dynamic-wrapper glass-panel fade-in-up" style="animation-delay: 0.4s;">
+    <section id="inicio" class="min-vh-100 d-flex align-items-center pt-5 print-header">
+        <div class="container text-center fade-in">
+            <img src="img/mi-foto.jpg" alt="Mi Foto" class="profile-pic mb-4 shadow" onerror="this.src='https://api.dicebear.com/7.x/bottts/svg?seed=Husky'">
             
-            <article id="servicios" class="content-section active">
-                <h2 class="section-title">Lo que hago</h2>
-                <div class="items-grid">
-                    <div class="item tech-card tilt">
-                        <i class="fa-solid fa-mobile-screen-button feature-icon"></i>
-                        <h4>Desarrollo Android Nativo</h4>
-                        <p>Aplicaciones y videojuegos de alto rendimiento en Java/Android Studio.</p>
-                    </div>
-                    <div class="item tech-card tilt">
-                        <i class="fa-solid fa-server feature-icon"></i>
-                        <h4>Web Full-Stack</h4>
-                        <p>SPA modernas con React, estilizado avanzado y backend en Laravel.</p>
-                    </div>
-                    <div class="item tech-card tilt">
-                        <i class="fa-solid fa-palette feature-icon"></i>
-                        <h4>Arte e Ilustración</h4>
-                        <p>Concept art, assets digitales y gestión de comisiones independientes.</p>
-                    </div>
-                </div>
-            </article>
+            <h1 class="display-4 fw-bold print-title">Gerardo Manjarrez Maldonado</h1>
+            <h2 class="text-info code-font h4 mb-3 print-subtitle">&lt; <span id="typewriter"></span> /&gt;</h2>
+            
+            <div class="print-contact-info d-none">
+                <p><i class="fa-solid fa-location-dot"></i> Toluca, Estado de México | <i class="fa-solid fa-envelope"></i> tu-correo@gmail.com | <i class="fa-brands fa-github"></i> github.com/tu-usuario</p>
+            </div>
 
-            <article id="proyectos" class="content-section">
-                <h2 class="section-title">Proyectos Destacados</h2>
-                <div class="items-grid">
-                    <div class="item tech-card tilt">
-                        <div class="project-header">
-                            <i class="fa-regular fa-folder-open folder-icon"></i>
-                            <div class="project-links"><a href="#" target="_blank" class="hover-target"><i class="fa-brands fa-github"></i></a></div>
+            <p class="lead text-secondary mx-auto mb-4 print-bio" style="max-width: 600px;">
+                Ingeniero en TI en formación. Combino la lógica del código con la creatividad del arte digital para crear soluciones eficientes.
+            </p>
+            
+            <div class="d-flex justify-content-center gap-3 no-print">
+                <a href="#proyectos" class="btn btn-info text-dark fw-bold px-4">Ver Proyectos</a>
+                <button onclick="window.print()" class="btn btn-outline-light px-4">
+                    <i class="fa-solid fa-file-pdf text-danger"></i> Imprimir CV
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre-mi" class="py-5 bg-darker print-section">
+        <div class="container">
+            <h2 class="fw-bold mb-4 border-bottom border-info pb-2 d-inline-block print-h2">Sobre mí</h2>
+            <div class="row g-4 mt-2 print-row">
+                <div class="col-md-6 print-col">
+                    <div class="card bg-dark text-light h-100 border-secondary print-card">
+                        <div class="card-body print-card-body">
+                            <h4 class="text-info print-h4"><i class="fa-solid fa-user-graduate"></i> Perfil</h4>
+                            <p>Radico en <strong>Toluca, Estado de México</strong>. Estudiante de Ingeniería en TI enfocado en crear soluciones de software eficientes, limpias y escalables.</p>
+                            <p>Me desempeño como <strong>Ilustrador Digital Freelance</strong>, gestionando mis comisiones, desde el diseño conceptual hasta la entrega al cliente.</p>
                         </div>
-                        <h4>Motor de Videojuegos 2D</h4>
-                        <p>Clones de Pac-Man/Generala en Android Nativo. Lógica y físicas desde cero.</p>
-                        <div class="tech-tags"><span>Android</span><span>Java</span></div>
                     </div>
-                    <div class="item tech-card tilt">
-                        <div class="project-header">
-                            <i class="fa-regular fa-folder-open folder-icon"></i>
-                            <div class="project-links"><a href="#" target="_blank" class="hover-target"><i class="fa-brands fa-github"></i></a></div>
+                </div>
+                <div class="col-md-6 print-col">
+                    <div class="card bg-dark text-light h-100 border-secondary print-card">
+                        <div class="card-body print-card-body">
+                            <h4 class="text-info print-h4"><i class="fa-solid fa-laptop-code"></i> Intereses</h4>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Desarrollo Móvil (Android Studio)</li>
+                                <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Desarrollo Web Full-Stack</li>
+                                <li class="mb-2"><i class="fa-solid fa-check text-success me-2"></i> Arte Digital y Diseño</li>
+                                <li><i class="fa-solid fa-check text-success me-2"></i> Gaming y Hardware</li>
+                            </ul>
                         </div>
-                        <h4>Plataforma Web React/Laravel</h4>
-                        <p>Interfaz dinámica y responsiva conectada a una API REST segura.</p>
-                        <div class="tech-tags"><span>Laravel</span><span>React</span><span>CSS</span></div>
                     </div>
                 </div>
-            </article>
+            </div>
+        </div>
+    </section>
 
-            <article id="habilidades" class="content-section">
-                <h2 class="section-title">Perfil Técnico</h2>
-                <div class="skills-showcase">
-                    <div class="skill-column">
-                        <h4 class="code-font highlight-text">Lenguajes</h4>
-                        <div class="skill-bar"><div class="skill-info"><span>Java & Android</span><span>85%</span></div><div class="progress-bar"><div class="progress" data-width="85%"></div></div></div>
-                        <div class="skill-bar"><div class="skill-info"><span>React & CSS Avanzado</span><span>80%</span></div><div class="progress-bar"><div class="progress" data-width="80%"></div></div></div>
-                    </div>
-                    <div class="skill-column">
-                        <h4 class="code-font highlight-text">Backend</h4>
-                        <div class="skill-bar"><div class="skill-info"><span>Laravel & PHP</span><span>75%</span></div><div class="progress-bar"><div class="progress" data-width="75%"></div></div></div>
-                        <div class="skill-bar"><div class="skill-info"><span>SQL</span><span>80%</span></div><div class="progress-bar"><div class="progress" data-width="80%"></div></div></div>
-                    </div>
-                </div>
-            </article>
-
-            <article id="experiencia" class="content-section">
-                <h2 class="section-title">Trayectoria</h2>
-                <div class="timeline">
-                    <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content tech-card tilt"><span class="date-badge">Actualidad</span><h4>Ingeniería en TI</h4><p>Enfoque en arquitectura de software y calidad.</p></div></div>
-                    <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-content tech-card tilt"><span class="date-badge">Freelance</span><h4>Ilustrador Digital</h4><p>Gestión integral de comisiones y atención a clientes reales.</p></div></div>
-                </div>
-            </article>
-
-            <article id="contacto" class="content-section">
-                <h2 class="section-title">Comunícate conmigo</h2>
-                
-                <div class="contact-container tech-card tilt" style="margin: 0 auto; max-width: 600px;">
-                    <p class="contact-text" style="color: var(--text-secondary); margin-bottom: 2rem; text-align: center;">¿Tienes un proyecto en mente o una propuesta laboral? Envíame un mensaje directo.</p>
-                    
-                    <form id="contact-form" action="https://formsubmit.co/refugerar07@gmail.com" method="POST" class="contact-form">
-                        <input type="hidden" name="_subject" value="¡Nuevo mensaje desde tu CV Online!">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_template" value="table">
+    <section id="habilidades" class="py-5 print-section">
+        <div class="container">
+            <h2 class="fw-bold mb-4 border-bottom border-info pb-2 d-inline-block print-h2">Habilidades Técnicas</h2>
+            <div class="row g-4 mt-2 print-row">
+                <div class="col-md-6 print-col">
+                    <div class="card bg-dark text-light p-4 border-secondary print-card">
+                        <h5 class="text-info code-font mb-4 print-h4">Frontend & Móvil</h5>
                         
-                        <div class="form-group">
-                            <input type="text" id="name" name="Nombre" placeholder="Tu Nombre" required class="hover-target">
+                        <div class="mb-3 print-mb-1">
+                            <div class="d-flex justify-content-between mb-1"><span>Java (Android)</span><span>85%</span></div>
+                            <div class="progress bg-secondary" style="height: 6px;"><div class="progress-bar bg-info" style="width: 85%;"></div></div>
                         </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="Correo" placeholder="Tu Correo Electrónico" required class="hover-target">
+                        <div class="mb-3 print-mb-1">
+                            <div class="d-flex justify-content-between mb-1"><span>HTML, CSS, React</span><span>80%</span></div>
+                            <div class="progress bg-secondary" style="height: 6px;"><div class="progress-bar bg-info" style="width: 80%;"></div></div>
                         </div>
-                        <div class="form-group">
-                            <textarea id="message" name="Mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required class="hover-target"></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn hover-target" id="submit-button">
-                            <i class="fa-solid fa-paper-plane"></i> Enviar Mensaje
-                        </button>
-                    </form>
+                    </div>
                 </div>
-            </article>
+                <div class="col-md-6 print-col">
+                    <div class="card bg-dark text-light p-4 border-secondary print-card">
+                        <h5 class="text-info code-font mb-4 print-h4">Backend & Herramientas</h5>
+                        
+                        <div class="mb-3 print-mb-1">
+                            <div class="d-flex justify-content-between mb-1"><span>Laravel & PHP</span><span>75%</span></div>
+                            <div class="progress bg-secondary" style="height: 6px;"><div class="progress-bar bg-primary" style="width: 75%;"></div></div>
+                        </div>
+                        <div class="mb-3 print-mb-1">
+                            <div class="d-flex justify-content-between mb-1"><span>SQL / Bases de Datos</span><span>80%</span></div>
+                            <div class="progress bg-secondary" style="height: 6px;"><div class="progress-bar bg-primary" style="width: 80%;"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        </section>
-    </main>
+    <section id="proyectos" class="py-5 bg-darker print-section">
+        <div class="container">
+            <h2 class="fw-bold mb-4 border-bottom border-info pb-2 d-inline-block print-h2">Proyectos</h2>
+            <div class="row g-4 mt-2 print-row">
+                
+                <div class="col-md-4 print-col-4">
+                    <div class="card bg-dark text-light h-100 border-secondary print-card">
+                        <div class="card-body d-flex flex-column print-card-body">
+                            <div class="d-flex justify-content-between mb-3 no-print">
+                                <i class="fa-solid fa-mobile-screen fs-3 text-info"></i>
+                                <a href="TU_GITHUB_PACMAN" target="_blank" class="text-light fs-4"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                            <h5 class="card-title text-info print-h4">Videojuegos Móviles</h5>
+                            <p class="card-text text-secondary small print-p">Desarrollo nativo en Java de clones de Pac-Man y Generala para Android.</p>
+                            <div class="mt-auto no-print">
+                                <span class="badge bg-secondary">Android Studio</span> <span class="badge bg-secondary">Java</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="col-md-4 print-col-4">
+                    <div class="card bg-dark text-light h-100 border-secondary print-card">
+                        <div class="card-body d-flex flex-column print-card-body">
+                            <div class="d-flex justify-content-between mb-3 no-print">
+                                <i class="fa-solid fa-globe fs-3 text-info"></i>
+                                <a href="TU_GITHUB_LARAVEL" target="_blank" class="text-light fs-4"><i class="fa-brands fa-github"></i></a>
+                            </div>
+                            <h5 class="card-title text-info print-h4">Plataforma Web</h5>
+                            <p class="card-text text-secondary small print-p">SPA con interfaz interactiva en React conectada a una API REST en Laravel.</p>
+                            <div class="mt-auto no-print">
+                                <span class="badge bg-secondary">React</span> <span class="badge bg-secondary">Laravel</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 print-col-4">
+                    <div class="card bg-dark text-light h-100 border-secondary print-card">
+                        <div class="card-body d-flex flex-column print-card-body">
+                            <div class="mb-3 no-print"><i class="fa-solid fa-palette fs-3 text-info"></i></div>
+                            <h5 class="card-title text-info print-h4">Ilustración Freelance</h5>
+                            <p class="card-text text-secondary small print-p">Gestión comercial y creación de arte digital bajo comisiones con clientes.</p>
+                            <div class="mt-auto no-print">
+                                <span class="badge bg-secondary">Arte Digital</span> <span class="badge bg-secondary">Diseño</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-5 no-print" style="background-color: #0f172a;">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-4 text-white">Contacto</h2>
+            
+            <div class="row justify-content-center mt-3">
+                <div class="col-md-7 col-lg-6">
+                    
+                    <div class="d-flex justify-content-center gap-3 mb-4">
+                        <a href="https://github.com/TheGerarCraft01" target="_blank" class="btn-outline-custom"><i class="fa-brands fa-github"></i> GitHub</a>
+                        <a href="https://linkedin.com/in/TU_USUARIO" target="_blank" class="btn-outline-custom"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                    </div>
+                    
+                    <form id="contact-form" action="https://formsubmit.co/refugerar07@gmail.com" method="POST" class="text-start">
+                        <input type="hidden" name="_subject" value="Nuevo mensaje desde mi Portafolio">
+                        <input type="hidden" name="_captcha" value="false">
+                        
+                        <div class="mb-3">
+                            <input type="text" name="Nombre" class="form-control form-dark" placeholder="Tu Nombre Completo" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" name="Correo" class="form-control form-dark" placeholder="Tu Correo Electrónico" required>
+                        </div>
+                        <div class="mb-4">
+                            <textarea name="Mensaje" class="form-control form-dark" rows="5" placeholder="Cuéntame sobre tu proyecto o propuesta..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" id="submit-button" class="btn btn-cyan w-100 fw-bold">Enviar Mensaje</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
